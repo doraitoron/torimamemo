@@ -8,16 +8,34 @@
 import UIKit
 
 class MemoTableTableViewController: UITableViewController {
+    
+//    セクション設置は「＃04」
 
 //    var memos = [
 //             ["title": "5月18日", "detail": "今日は雨だった"],
 //             ["title": "5月19日", "detail": "今日は曇りだった"],
 //             ["title": "5月20日", "detail": "今日は晴れだった"]
 //         ]
-    var memos = /*[*/["タピ","オカ","パン"]/*,["月","太陽"]]*/
+    let userDefaults = UserDefaults.standard
+    var memos = [String]() ///*[*/["タピ","オカ","パン"]/*,["月","太陽"]]*/
+    var targets = [String]()
+    
+//    self.userDefaults.set(self.memos, forKey: "memos")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.userDefaults.object(forKey: "memos") != nil {
+            self.memos=self.userDefaults.stringArray(forKey: "memos")!
+        }else{
+            self.memos=[]
+        }
+        if self.userDefaults.object(forKey: "targets") != nil {
+            self.targets=self.userDefaults.stringArray(forKey: "targets")!
+        }else{
+            self.targets=[]
+        }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -58,6 +76,63 @@ class MemoTableTableViewController: UITableViewController {
 //        return self.memos[section].count
         return self.memos.count
     }
+    
+    override func  tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            self.memos.remove(at: indexPath.row)
+            self.targets.remove(at: indexPath.row)
+            
+            self.userDefaults.set(self.memos, forKey: "memos")
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }else if editingStyle == .insert{
+//            行の挿入
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else{
+            return
+        }
+        if identifier == "editMemo"{
+            let memoVC = segue.destination as! MemoViewController
+            memoVC.memo = self.memos[(self.tableView.indexPathForSelectedRow?.row)!]
+            let targetVC = segue.destination as! MemoViewController
+            targetVC.target = self.targets[(self.tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+    
+    @IBAction func unwindToMemoList(sender:UIStoryboardSegue){
+        guard let sourceVC=sender.source as? MemoViewController,
+        let memo = sourceVC.memo else{
+            return
+        }
+//        let target = sourceVC.target else{
+//            return
+//        }
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+            self.memos[selectedIndexPath.row] = memo
+        } else {
+        self.memos.append(memo)
+        }
+        self.userDefaults.set(self.memos, forKey: "memos")
+//        self.tableView.reloadData()
+        
+        guard let sourceVC=sender.source as? MemoViewController,
+        let target = sourceVC.target else{
+            return
+        }
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+            self.targets[selectedIndexPath.row] = target
+        } else {
+        self.targets.append(target)
+        }
+        self.userDefaults.set(self.targets, forKey: "targets")
+        
+        self.tableView.reloadData()
+    }
+    
+    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

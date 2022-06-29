@@ -21,46 +21,162 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75W-5G-5E0">
+                                <rect key="frame" x="309" y="626" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="老人"/>
+                                <connections>
+                                    <action selector="touchButton_Y5:" destination="BYZ-38-t0r" eventType="touchDown" id="35X-g2-dgU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6d-HW-1AD">
+                                <rect key="frame" x="30" y="626" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="男性"/>
+                                <connections>
+                                    <action selector="touchButton_man:" destination="BYZ-38-t0r" eventType="touchDown" id="Gv3-iR-1Xt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xM7-uu-xRu">
+                                <rect key="frame" x="30" y="669" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="女性"/>
+                                <connections>
+                                    <action selector="touchButton_woman:" destination="BYZ-38-t0r" eventType="touchDown" id="bEW-YA-o0h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-xV-z4X">
+                                <rect key="frame" x="268" y="669" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="中年"/>
+                                <connections>
+                                    <action selector="touchButton_Y4:" destination="BYZ-38-t0r" eventType="touchDown" id="QY4-bF-Y8I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-bD-OFN">
+                                <rect key="frame" x="226" y="626" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="若者"/>
+                                <connections>
+                                    <action selector="touchButton_Y3:" destination="BYZ-38-t0r" eventType="touchDown" id="qs4-Gw-pgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhU-Kk-KoC">
+                                <rect key="frame" x="184" y="669" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="幼児"/>
+                                <connections>
+                                    <action selector="touchButton_Y2:" destination="BYZ-38-t0r" eventType="touchDown" id="rNo-IH-Xn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sh-A8-E2b">
+                                <rect key="frame" x="143" y="626" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="赤子"/>
+                                <connections>
+                                    <action selector="touchButton_Y1:" destination="BYZ-38-t0r" eventType="touchDown" id="AGj-bL-oJ4"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycI-mU-2NV">
+                                <rect key="frame" x="201" y="712" width="209" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="企画名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wB5-JJ-DEo">
+                                <rect key="frame" x="30" y="57" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対象" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSQ-I0-gpU">
+                                <rect key="frame" x="30" y="128" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IW7-lQ-yFT">
+                                <rect key="frame" x="30" y="157" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IW7-lQ-yFT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="38P-LS-cPF"/>
+                            <constraint firstItem="zSQ-I0-gpU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="CXc-Uc-MD9"/>
+                            <constraint firstItem="IW7-lQ-yFT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DXv-eO-XgI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IW7-lQ-yFT" secondAttribute="trailing" constant="30" id="JKH-e1-na7"/>
+                            <constraint firstItem="wB5-JJ-DEo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Jl2-1B-Xl1"/>
+                            <constraint firstItem="1jf-LL-oSO" firstAttribute="top" secondItem="wB5-JJ-DEo" secondAttribute="bottom" constant="8" id="Qml-ni-MoE"/>
                             <constraint firstItem="1jf-LL-oSO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Rih-D7-sff"/>
                             <constraint firstItem="1jf-LL-oSO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ag2-q9-smY"/>
+                            <constraint firstItem="zSQ-I0-gpU" firstAttribute="top" secondItem="wB5-JJ-DEo" secondAttribute="bottom" constant="50" id="bko-BF-ZG6"/>
+                            <constraint firstItem="IW7-lQ-yFT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="101" id="fhk-Sw-ETh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1jf-LL-oSO" secondAttribute="trailing" constant="30" id="i86-bE-PII"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NewMemo" id="q9S-c2-aPB">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="x3B-HF-wY7"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="OF2-D6-Pxb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="x3B-HF-wY7">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="EFL-Gk-3qK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="OF2-D6-Pxb">
+                            <connections>
+                                <segue destination="je5-ey-jFt" kind="unwind" unwindAction="unwindToMemoListWithSender:" id="WqC-5D-3So"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="MemoTextField" destination="1jf-LL-oSO" id="m6e-OE-Fov"/>
-                        <outlet property="saveBotton" destination="OF2-D6-Pxb" id="kv6-VL-2x3"/>
+                        <outlet property="ManButton" destination="j6d-HW-1AD" id="yWK-JD-bqB"/>
+                        <outlet property="MemoTextField" destination="1jf-LL-oSO" id="MCD-k7-FUc"/>
+                        <outlet property="TargetTextField" destination="IW7-lQ-yFT" id="uV3-ey-ggh"/>
+                        <outlet property="Y1Button" destination="4sh-A8-E2b" id="aht-ie-U2j"/>
+                        <outlet property="Y2Button" destination="lhU-Kk-KoC" id="k8d-Rk-dKF"/>
+                        <outlet property="Y3Button" destination="dhN-bD-OFN" id="TTc-UH-G2Q"/>
+                        <outlet property="Y4Button" destination="YcC-xV-z4X" id="lFy-bD-g7O"/>
+                        <outlet property="Y5Button" destination="75W-5G-5E0" id="axS-56-y4y"/>
+                        <outlet property="saveButton" destination="OF2-D6-Pxb" id="Yqs-ae-m8s"/>
+                        <outlet property="womanButton" destination="xM7-uu-xRu" id="TjB-fK-Xwb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="je5-ey-jFt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1839.1304347826087" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1705.7971014492755" y="83.705357142857139"/>
         </scene>
         <!--Memo-->
         <scene sceneID="7BX-Bb-dJp">
             <objects>
                 <tableViewController id="k8x-Py-4x0" customClass="MemoTableTableViewController" customModule="torimamemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ico-mr-ejS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ico-mr-ejS" customClass="MemoTableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" textLabel="6f3-md-bcr" style="IBUITableViewCellStyleDefault" id="8ar-aY-bXf">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" textLabel="6f3-md-bcr" style="IBUITableViewCellStyleDefault" id="8ar-aY-bXf">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8ar-aY-bXf" id="v07-Hm-oUn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6f3-md-bcr">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -68,12 +184,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="editMemo" id="02p-rh-1YN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="k8x-Py-4x0" id="08H-bU-HI9"/>
-                            <outlet property="delegate" destination="k8x-Py-4x0" id="Mdi-s9-yaZ"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Memo" id="kwK-N5-F2k">
                         <barButtonItem key="rightBarButtonItem" title="＋" id="4cq-ZO-PTk">
@@ -121,9 +236,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qja-aB-63M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="83.705357142857139"/>
+            <point key="canvasLocation" x="941" y="475"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fj6-it-5ua"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

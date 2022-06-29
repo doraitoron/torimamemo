@@ -105,10 +105,10 @@
 				4B9267CF283CAE1D0002AD42 /* SceneDelegate.swift */,
 				4B9267D3283CAE1D0002AD42 /* Main.storyboard */,
 				4BCCCA8D2845EC7C00E80AAA /* MemoViewController.swift */,
+				4B9267FD283CAF560002AD42 /* MemoTableTableViewController.swift */,
 				4B9267D6283CAE1E0002AD42 /* Assets.xcassets */,
 				4B9267D8283CAE1E0002AD42 /* LaunchScreen.storyboard */,
 				4B9267DB283CAE1E0002AD42 /* Info.plist */,
-				4B9267FD283CAF560002AD42 /* MemoTableTableViewController.swift */,
 			);
 			path = torimamemo;
 			sourceTree = "<group>";
