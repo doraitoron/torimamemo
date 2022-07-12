@@ -11,10 +11,19 @@ class MemoViewController: UIViewController {
 
     var memo: String?
     var target: String?
+    var goal:String?
+    var way:String?
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var MemoTextField: UITextField!
     
     @IBOutlet weak var TargetTextField:UITextField!
+//   /*@State*/ var editText = ""
+//    TextEditor(text: $editText)
+    
+    @IBOutlet weak var GoalTextField:UITextField!
+    
+    @IBOutlet weak var WayTextField:UITextField!
+    
     @IBOutlet var ManButton:UIButton!
     @IBOutlet var womanButton:UIButton!
     @IBOutlet var Y1Button:UIButton!
@@ -39,6 +48,11 @@ class MemoViewController: UIViewController {
         if let memo = self.memo {
             self.MemoTextField.text=memo
             self.TargetTextField.text=target
+            self.GoalTextField.text=goal
+            self.WayTextField.text=way
+            
+//            TextEditor(text: $editText)
+            
             self.navigationItem.title="Edit Memo"
             self.saveButton.isEnabled = true
         }
@@ -63,6 +77,8 @@ class MemoViewController: UIViewController {
         }
         self.memo = self.MemoTextField.text ?? ""
         self.target = self.TargetTextField.text ?? ""
+        self.goal = self.GoalTextField.text ?? ""
+        self.way = self.WayTextField.text ?? ""
     }
     
 //    var memos = ["タピ","オカ","パン"]

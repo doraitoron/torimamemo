@@ -19,11 +19,30 @@ class MemoTableTableViewController: UITableViewController {
     let userDefaults = UserDefaults.standard
     var memos = [String]() ///*[*/["タピ","オカ","パン"]/*,["月","太陽"]]*/
     var targets = [String]()
+    var goals = [String]()
+    var ways = [String]()
+    
     
 //    self.userDefaults.set(self.memos, forKey: "memos")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
+        // MARK: - 全削除
+        
+        
+//        func removeUserDefaults() {
+//            let appDomain = Bundle.main.bundleIdentifier
+//            UserDefaults.standard.removePersistentDomain(forName: appDomain!)
+//        }
+        
+        
+        
+        
         
         if self.userDefaults.object(forKey: "memos") != nil {
             self.memos=self.userDefaults.stringArray(forKey: "memos")!
@@ -34,6 +53,16 @@ class MemoTableTableViewController: UITableViewController {
             self.targets=self.userDefaults.stringArray(forKey: "targets")!
         }else{
             self.targets=[]
+        }
+        if self.userDefaults.object(forKey: "goals") != nil {
+            self.goals=self.userDefaults.stringArray(forKey: "goals")!
+        }else{
+            self.goals=[]
+        }
+        if self.userDefaults.object(forKey: "ways") != nil {
+            self.ways=self.userDefaults.stringArray(forKey: "ways")!
+        }else{
+            self.ways=[]
         }
 
 
@@ -81,8 +110,10 @@ class MemoTableTableViewController: UITableViewController {
         if editingStyle == .delete{
             self.memos.remove(at: indexPath.row)
             self.targets.remove(at: indexPath.row)
+            self.goals.remove(at: indexPath.row)
+            self.ways.remove(at: indexPath.row)
             
-            self.userDefaults.set(self.memos, forKey: "memos")
+//            self.userDefaults.set(self.memos, forKey: "memos")
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         }else if editingStyle == .insert{
@@ -99,6 +130,10 @@ class MemoTableTableViewController: UITableViewController {
             memoVC.memo = self.memos[(self.tableView.indexPathForSelectedRow?.row)!]
             let targetVC = segue.destination as! MemoViewController
             targetVC.target = self.targets[(self.tableView.indexPathForSelectedRow?.row)!]
+            let goalVC = segue.destination as! MemoViewController
+            goalVC.goal = self.goals[(self.tableView.indexPathForSelectedRow?.row)!]
+            let wayVC = segue.destination as! MemoViewController
+            wayVC.way = self.ways[(self.tableView.indexPathForSelectedRow?.row)!]
         }
     }
     
@@ -129,8 +164,38 @@ class MemoTableTableViewController: UITableViewController {
         }
         self.userDefaults.set(self.targets, forKey: "targets")
         
+        
+        guard let sourceVC=sender.source as? MemoViewController,
+        let goal = sourceVC.goal else{
+            return
+        }
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+            self.goals[selectedIndexPath.row] = goal
+        } else {
+        self.goals.append(goal)
+        }
+        self.userDefaults.set(self.goals, forKey: "goals")
+        
+    //    self.tableView.reloadData()
+    
+
+    guard let sourceVC=sender.source as? MemoViewController,
+    let way = sourceVC.way else{
+        return
+    }
+    if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+        self.ways[selectedIndexPath.row] = way
+    } else {
+    self.ways.append(way)
+    }
+    self.userDefaults.set(self.ways, forKey: "ways")
+
+    //self.tableView.reloadData()
+    
+        
         self.tableView.reloadData()
     }
+    
     
     
 
