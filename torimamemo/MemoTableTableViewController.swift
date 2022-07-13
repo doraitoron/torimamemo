@@ -35,10 +35,10 @@ class MemoTableTableViewController: UITableViewController {
         // MARK: - 全削除
         
         
-//        func removeUserDefaults() {
+////        func removeUserDefaults() {
 //            let appDomain = Bundle.main.bundleIdentifier
 //            UserDefaults.standard.removePersistentDomain(forName: appDomain!)
-//        }
+////        }
         
         
         

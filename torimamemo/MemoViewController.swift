@@ -16,13 +16,13 @@ class MemoViewController: UIViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var MemoTextField: UITextField!
     
-    @IBOutlet weak var TargetTextField:UITextField!
+    @IBOutlet weak var TargetTextField:UITextView!
 //   /*@State*/ var editText = ""
 //    TextEditor(text: $editText)
     
-    @IBOutlet weak var GoalTextField:UITextField!
+    @IBOutlet weak var GoalTextField:UITextView!
     
-    @IBOutlet weak var WayTextField:UITextField!
+    @IBOutlet weak var WayTextField:UITextView!
     
     @IBOutlet var ManButton:UIButton!
     @IBOutlet var womanButton:UIButton!
@@ -44,6 +44,21 @@ class MemoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.saveButton.isEnabled = false
+        
+            TargetTextField.layer.borderColor = UIColor.gray.cgColor
+        TargetTextField.layer.borderWidth = 1.0
+        TargetTextField.layer.cornerRadius = 5.0
+                TargetTextField.layer.masksToBounds = true
+        
+        GoalTextField.layer.borderColor = UIColor.gray.cgColor
+        GoalTextField.layer.borderWidth = 1.0
+        GoalTextField.layer.cornerRadius = 5.0
+        GoalTextField.layer.masksToBounds = true
+        
+        WayTextField.layer.borderColor = UIColor.gray.cgColor
+        WayTextField.layer.borderWidth = 1.0
+        WayTextField.layer.cornerRadius = 5.0
+        WayTextField.layer.masksToBounds = true
         
         if let memo = self.memo {
             self.MemoTextField.text=memo
