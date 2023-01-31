@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 class MemoViewController: UIViewController {
 
-    var memo: String?
+   /* var memo: String?
     var target: String?
     var goal:String?
     var way:String?
+    var kikaku:String?*/
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var MemoTextField: UITextField!
     
@@ -23,6 +26,10 @@ class MemoViewController: UIViewController {
     @IBOutlet weak var GoalTextField:UITextView!
     
     @IBOutlet weak var WayTextField:UITextView!
+    @IBOutlet weak var KikakuTextField:UITextView!
+    
+    
+    var addresses: [[String : String]] = []
     
 //    @IBOutlet var ManButton:UIButton!
 //    @IBOutlet var womanButton:UIButton!
@@ -41,8 +48,13 @@ class MemoViewController: UIViewController {
 //    var switch_Y5:Bool=false
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         self.saveButton.isEnabled = false
         
             TargetTextField.layer.borderColor = UIColor.gray.cgColor
@@ -60,17 +72,23 @@ class MemoViewController: UIViewController {
         WayTextField.layer.cornerRadius = 5.0
         WayTextField.layer.masksToBounds = true
         
-        if let memo = self.memo {
+        KikakuTextField.layer.borderColor = UIColor.gray.cgColor
+        KikakuTextField.layer.borderWidth = 1.0
+        KikakuTextField.layer.cornerRadius = 5.0
+        KikakuTextField.layer.masksToBounds = true
+        
+        /*if let memo = self.memo {
             self.MemoTextField.text=memo
             self.TargetTextField.text=target
             self.GoalTextField.text=goal
             self.WayTextField.text=way
+            self.KikakuTextField.text=kikaku
             
 //            TextEditor(text: $editText)
             
             self.navigationItem.title="Edit Memo"
             self.saveButton.isEnabled = true
-        }
+        }*/
         
 //        if let target = self.target{
 //            self.TargetTextField.text=target
@@ -90,10 +108,11 @@ class MemoViewController: UIViewController {
         guard let button = sender as? UIBarButtonItem, button === self.saveButton else {
             return
         }
-        self.memo = self.MemoTextField.text ?? ""
+       /* self.memo = self.MemoTextField.text ?? ""
         self.target = self.TargetTextField.text ?? ""
         self.goal = self.GoalTextField.text ?? ""
         self.way = self.WayTextField.text ?? ""
+        self.kikaku = self.KikakuTextField.text ?? ""*/
     }
     
 //    var memos = ["タピ","オカ","パン"]
@@ -201,8 +220,32 @@ class MemoViewController: UIViewController {
 //           Y5Button.backgroundColor = UIColor.darkText
 //       }
 //     }
+    @IBAction func openURLTapped(_ sender: Any) {
+        guard let url = URL(string: self.KikakuTextField.text ?? "") else { return }
+            UIApplication.shared.open(url)
+        }
+    func Open(_ url: URL,options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],completionHandler completion: ((Bool) -> Void)? = nil){}
     
-    
+    @IBAction func send() {
+//            var x9 = String(addresses.count).count
+//        AC.text = String(addresses.count)
+        let addressData:[String:Any] = [
+            "name": MemoTextField.text,
+            "target":TargetTextField.text,
+            "goal": GoalTextField.text,
+            "way": WayTextField.text,
+            "kikaku": KikakuTextField.text,
+            "array": addresses.count,
+            //            "time":,
+        ]
+        
+        Firebase.Firestore.firestore().collection("addresses").addDocument(data: addressData
+        ) { err in
+            if let err = err {
+                print("送信できませんでした: \(err)")
+            }
+        }
+    }
     }
     
     

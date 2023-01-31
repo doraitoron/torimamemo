@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B8370B328FE7D5F004E7C89 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B8370B228FE7D5E004E7C89 /* GoogleService-Info.plist */; };
 		4B9267CE283CAE1D0002AD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9267CD283CAE1D0002AD42 /* AppDelegate.swift */; };
 		4B9267D0283CAE1D0002AD42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9267CF283CAE1D0002AD42 /* SceneDelegate.swift */; };
 		4B9267D5283CAE1D0002AD42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B9267D3283CAE1D0002AD42 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		4B9267F1283CAE1F0002AD42 /* torimamemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9267F0283CAE1F0002AD42 /* torimamemoUITestsLaunchTests.swift */; };
 		4B9267FE283CAF560002AD42 /* MemoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9267FD283CAF560002AD42 /* MemoTableTableViewController.swift */; };
 		4BCCCA8E2845EC7C00E80AAA /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCCCA8D2845EC7C00E80AAA /* MemoViewController.swift */; };
+		4BDB378D2910F52E0020D4B1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4BDB378C2910F52E0020D4B1 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,16 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4B9267CA283CAE1D0002AD42 /* torimamemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = torimamemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B8370B228FE7D5E004E7C89 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B9267CA283CAE1D0002AD42 /* P･write.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "P･write.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9267CD283CAE1D0002AD42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B9267CF283CAE1D0002AD42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4B9267D4283CAE1D0002AD42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B9267D6283CAE1E0002AD42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B9267D9283CAE1E0002AD42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B9267DB283CAE1E0002AD42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B9267E0283CAE1F0002AD42 /* torimamemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = torimamemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9267E0283CAE1F0002AD42 /* P･writeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P･writeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9267E4283CAE1F0002AD42 /* torimamemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = torimamemoTests.swift; sourceTree = "<group>"; };
-		4B9267EA283CAE1F0002AD42 /* torimamemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = torimamemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9267EA283CAE1F0002AD42 /* P･writeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "P･writeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B9267EE283CAE1F0002AD42 /* torimamemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = torimamemoUITests.swift; sourceTree = "<group>"; };
 		4B9267F0283CAE1F0002AD42 /* torimamemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = torimamemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B9267FD283CAF560002AD42 /* MemoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTableTableViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BDB378D2910F52E0020D4B1 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +95,9 @@
 		4B9267CB283CAE1D0002AD42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B9267CA283CAE1D0002AD42 /* torimamemo.app */,
-				4B9267E0283CAE1F0002AD42 /* torimamemoTests.xctest */,
-				4B9267EA283CAE1F0002AD42 /* torimamemoUITests.xctest */,
+				4B9267CA283CAE1D0002AD42 /* P･write.app */,
+				4B9267E0283CAE1F0002AD42 /* P･writeTests.xctest */,
+				4B9267EA283CAE1F0002AD42 /* P･writeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +105,7 @@
 		4B9267CC283CAE1D0002AD42 /* torimamemo */ = {
 			isa = PBXGroup;
 			children = (
+				4B8370B228FE7D5E004E7C89 /* GoogleService-Info.plist */,
 				4B9267CD283CAE1D0002AD42 /* AppDelegate.swift */,
 				4B9267CF283CAE1D0002AD42 /* SceneDelegate.swift */,
 				4B9267D3283CAE1D0002AD42 /* Main.storyboard */,
@@ -133,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B9267C9283CAE1D0002AD42 /* torimamemo */ = {
+		4B9267C9283CAE1D0002AD42 /* P･write */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B9267F4283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemo" */;
+			buildConfigurationList = 4B9267F4283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･write" */;
 			buildPhases = (
 				4B9267C6283CAE1D0002AD42 /* Sources */,
 				4B9267C7283CAE1D0002AD42 /* Frameworks */,
@@ -145,14 +150,17 @@
 			);
 			dependencies = (
 			);
-			name = torimamemo;
+			name = "P･write";
+			packageProductDependencies = (
+				4BDB378C2910F52E0020D4B1 /* FirebaseFirestore */,
+			);
 			productName = torimamemo;
-			productReference = 4B9267CA283CAE1D0002AD42 /* torimamemo.app */;
+			productReference = 4B9267CA283CAE1D0002AD42 /* P･write.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4B9267DF283CAE1F0002AD42 /* torimamemoTests */ = {
+		4B9267DF283CAE1F0002AD42 /* P･writeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B9267F7283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemoTests" */;
+			buildConfigurationList = 4B9267F7283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･writeTests" */;
 			buildPhases = (
 				4B9267DC283CAE1F0002AD42 /* Sources */,
 				4B9267DD283CAE1F0002AD42 /* Frameworks */,
@@ -163,14 +171,14 @@
 			dependencies = (
 				4B9267E2283CAE1F0002AD42 /* PBXTargetDependency */,
 			);
-			name = torimamemoTests;
+			name = "P･writeTests";
 			productName = torimamemoTests;
-			productReference = 4B9267E0283CAE1F0002AD42 /* torimamemoTests.xctest */;
+			productReference = 4B9267E0283CAE1F0002AD42 /* P･writeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4B9267E9283CAE1F0002AD42 /* torimamemoUITests */ = {
+		4B9267E9283CAE1F0002AD42 /* P･writeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B9267FA283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemoUITests" */;
+			buildConfigurationList = 4B9267FA283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･writeUITests" */;
 			buildPhases = (
 				4B9267E6283CAE1F0002AD42 /* Sources */,
 				4B9267E7283CAE1F0002AD42 /* Frameworks */,
@@ -181,9 +189,9 @@
 			dependencies = (
 				4B9267EC283CAE1F0002AD42 /* PBXTargetDependency */,
 			);
-			name = torimamemoUITests;
+			name = "P･writeUITests";
 			productName = torimamemoUITests;
-			productReference = 4B9267EA283CAE1F0002AD42 /* torimamemoUITests.xctest */;
+			productReference = 4B9267EA283CAE1F0002AD42 /* P･writeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B9267C5283CAE1D0002AD42 /* Build configuration list for PBXProject "torimamemo" */;
+			buildConfigurationList = 4B9267C5283CAE1D0002AD42 /* Build configuration list for PBXProject "P･write" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,13 +226,16 @@
 				Base,
 			);
 			mainGroup = 4B9267C1283CAE1D0002AD42;
+			packageReferences = (
+				4BDB378B2910F52E0020D4B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4B9267CB283CAE1D0002AD42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B9267C9283CAE1D0002AD42 /* torimamemo */,
-				4B9267DF283CAE1F0002AD42 /* torimamemoTests */,
-				4B9267E9283CAE1F0002AD42 /* torimamemoUITests */,
+				4B9267C9283CAE1D0002AD42 /* P･write */,
+				4B9267DF283CAE1F0002AD42 /* P･writeTests */,
+				4B9267E9283CAE1F0002AD42 /* P･writeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8370B328FE7D5F004E7C89 /* GoogleService-Info.plist in Resources */,
 				4B9267DA283CAE1E0002AD42 /* LaunchScreen.storyboard in Resources */,
 				4B9267D7283CAE1E0002AD42 /* Assets.xcassets in Resources */,
 				4B9267D5283CAE1D0002AD42 /* Main.storyboard in Resources */,
@@ -290,12 +302,12 @@
 /* Begin PBXTargetDependency section */
 		4B9267E2283CAE1F0002AD42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B9267C9283CAE1D0002AD42 /* torimamemo */;
+			target = 4B9267C9283CAE1D0002AD42 /* P･write */;
 			targetProxy = 4B9267E1283CAE1F0002AD42 /* PBXContainerItemProxy */;
 		};
 		4B9267EC283CAE1F0002AD42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B9267C9283CAE1D0002AD42 /* torimamemo */;
+			target = 4B9267C9283CAE1D0002AD42 /* P･write */;
 			targetProxy = 4B9267EB283CAE1F0002AD42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -370,10 +382,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -424,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -509,7 +520,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/torimamemo.app/torimamemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P･write.app/P･write";
 			};
 			name = Debug;
 		};
@@ -528,7 +539,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/torimamemo.app/torimamemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P･write.app/P･write";
 			};
 			name = Release;
 		};
@@ -569,7 +580,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B9267C5283CAE1D0002AD42 /* Build configuration list for PBXProject "torimamemo" */ = {
+		4B9267C5283CAE1D0002AD42 /* Build configuration list for PBXProject "P･write" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B9267F2283CAE1F0002AD42 /* Debug */,
@@ -578,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B9267F4283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemo" */ = {
+		4B9267F4283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･write" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B9267F5283CAE1F0002AD42 /* Debug */,
@@ -587,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B9267F7283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemoTests" */ = {
+		4B9267F7283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･writeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B9267F8283CAE1F0002AD42 /* Debug */,
@@ -596,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B9267FA283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "torimamemoUITests" */ = {
+		4B9267FA283CAE1F0002AD42 /* Build configuration list for PBXNativeTarget "P･writeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B9267FB283CAE1F0002AD42 /* Debug */,
@@ -606,6 +617,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BDB378B2910F52E0020D4B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BDB378C2910F52E0020D4B1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BDB378B2910F52E0020D4B1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B9267C2283CAE1D0002AD42 /* Project object */;
 }

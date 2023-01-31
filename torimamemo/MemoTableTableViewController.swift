@@ -6,6 +6,67 @@
 //
 
 import UIKit
+import Firebase
+
+
+class MemoTableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet var tableView: UITableView!
+    
+    var addresses: [[String : String]] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        //        Firebase.Firestore.firestore().collection("addresses").order(by: "array")
+        
+        //        firebaseArray()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        Firebase.Firestore.firestore().collection("addresses").addSnapshotListener{ (querySnapshot, error) in
+            Firebase.Firestore.firestore().collection("addresses").order(by: "array").getDocuments(completion: { (querySnapshot, error) in
+                guard let snapshot = querySnapshot else{
+                    print(error!)
+                    return
+                }
+                self.addresses = []
+                snapshot.documentChanges.forEach{ diff in
+                    if (diff.type == .added){
+                        //                    Firebase.Firestore.firestore().order(by:"array")
+                        
+                        let name = diff.document.data()["name"] as! String
+//                        let address = diff.document.data()["address"] as! String
+                        
+                        
+                        self.addresses.append([
+                            "name": name,
+//                            "address": address,
+                        ])
+                        self.tableView.reloadData()
+                    }
+                }
+            })
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return addresses.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = addresses[indexPath.row]["name"]
+//        cell.detailTextLabel?.text = addresses[indexPath.row]["address"]
+        return cell
+    }
+}
+
+
+/*
+import UIKit
 
 class MemoTableTableViewController: UITableViewController {
     
@@ -21,6 +82,7 @@ class MemoTableTableViewController: UITableViewController {
     var targets = [String]()
     var goals = [String]()
     var ways = [String]()
+    var kikakus = [String]()
     
     
 //    self.userDefaults.set(self.memos, forKey: "memos")
@@ -63,6 +125,11 @@ class MemoTableTableViewController: UITableViewController {
             self.ways=self.userDefaults.stringArray(forKey: "ways")!
         }else{
             self.ways=[]
+        }
+        if self.userDefaults.object(forKey: "kikakus") != nil {
+            self.kikakus=self.userDefaults.stringArray(forKey: "kikakus")!
+        }else{
+            self.kikakus=[]
         }
 
 
@@ -112,8 +179,13 @@ class MemoTableTableViewController: UITableViewController {
             self.targets.remove(at: indexPath.row)
             self.goals.remove(at: indexPath.row)
             self.ways.remove(at: indexPath.row)
+            self.kikakus.remove(at: indexPath.row)
             
-//            self.userDefaults.set(self.memos, forKey: "memos")
+            self.userDefaults.set(self.memos, forKey: "memos")
+            self.userDefaults.set(self.targets, forKey: "targets")
+            self.userDefaults.set(self.goals, forKey: "goals")
+            self.userDefaults.set(self.ways, forKey: "ways")
+            self.userDefaults.set(self.kikakus, forKey: "kikakus")
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         }else if editingStyle == .insert{
@@ -134,6 +206,8 @@ class MemoTableTableViewController: UITableViewController {
             goalVC.goal = self.goals[(self.tableView.indexPathForSelectedRow?.row)!]
             let wayVC = segue.destination as! MemoViewController
             wayVC.way = self.ways[(self.tableView.indexPathForSelectedRow?.row)!]
+            let kikakuVC = segue.destination as! MemoViewController
+            kikakuVC.kikaku = self.kikakus[(self.tableView.indexPathForSelectedRow?.row)!]
         }
     }
     
@@ -189,6 +263,17 @@ class MemoTableTableViewController: UITableViewController {
     self.ways.append(way)
     }
     self.userDefaults.set(self.ways, forKey: "ways")
+        
+        guard let sourceVC=sender.source as? MemoViewController,
+        let kikaku = sourceVC.kikaku else{
+            return
+        }
+        if let selectedIndexPath = self.tableView.indexPathForSelectedRow {
+            self.kikakus[selectedIndexPath.row] = kikaku
+        } else {
+        self.kikakus.append(kikaku)
+        }
+        self.userDefaults.set(self.kikakus, forKey: "kikakus")
 
     //self.tableView.reloadData()
     
@@ -254,4 +339,4 @@ class MemoTableTableViewController: UITableViewController {
     }
     */
 
-}
+ }*/
